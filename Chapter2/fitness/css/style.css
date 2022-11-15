@@ -18,8 +18,12 @@ header {
     position: sticky;
     top: 0;
     background-color: #000;
-    height: 190px;
+    /* height: 190px; */
 }
+
+header .logo{
+    text-align: center;
+}    
 header img {
     margin : 0 auto;
 }
@@ -35,6 +39,15 @@ main {
     background-color: #fff;
     padding: 2%;
     font-size: 1.25em;
+}
+
+.tel-link {
+    background-color: #040404;
+    padding: 2%;
+    margin : 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
 }
 
 nav ul {
@@ -100,7 +113,20 @@ footer p a{
 
 .map {
     text-align: center;
+    padding: 2%;
+}
+
+iframe {
+    width: 100%;
+}
+
+.tablet-desktop {
+    display: none;
 }
 
 /* style rule for mobile viewport */
 
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px) {
+    
+}
