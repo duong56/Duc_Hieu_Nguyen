@@ -61,7 +61,7 @@ nav li {
 }
 
 nav li:first-child {
-    border: none;
+    border-top: none;
 }
 
 nav li a {
@@ -127,6 +127,98 @@ iframe {
 /* style rule for mobile viewport */
 
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 722px),print {
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* header for tablet */
+    header {
+        position: static;
+        padding-bottom: 2%;
+    }
+
+    /* nav for tablet */
+
+    nav li { 
+        border-top: none;
+        display: inline-block;
+        border-right:  1px solid #fff;
+    }
     
+    nav li:last-child {
+        border-right: none;
+    }
+
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }
+
+    main ul {
+        margin: 0 0 4% 10%;
+    }
+
+    .tel-num {
+        font-size: 1.25em;
+    }
+
+    .map {
+        width: 600px;
+        height: 450px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 769px), print {
+    /* header for desktop */
+    header {
+        width: 25%;
+        float: left;
+        padding-bottom: 0;
+    }
+
+    nav {
+        float: right;
+        width: 70%;
+        margin: 4em 1em 0 0 ;
+    }
+
+    nav ul {
+        text-align: right;
+
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav li a {
+        padding: 0.5em 1em;
+    }
+
+    nav li a:hover {
+        color: #000;
+        background-color: #fff;
+    }
+}
+/* large screen */
+@media screen and (min-width: 1921px) {
+    #container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+/* Print */
+
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
 }
