@@ -3,7 +3,11 @@ Author : Hieu Nguuyen
 Date : Nov 12, 2021
 File name: style.css
 */
-body,header, nav, main, footer, h1, div, img, ul {
+* {
+    box-sizing: border-box;
+}
+
+body,header, nav, main, footer, h1, div, img, ul, figcaption, figure {
     padding: 0;
     margin: 0;
     border: 0;
@@ -14,8 +18,8 @@ body {
 }
 
 header {
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky;
+    position: sticky; */
     top: 0;
     background-color: #000;
     /* height: 190px; */
@@ -48,6 +52,11 @@ main {
     width: 80%;
     text-align: center;
     border-radius: 5px;
+}
+
+.tel-link a {
+    text-decoration: none;
+    color: #fff;
 }
 
 nav ul {
@@ -101,6 +110,53 @@ footer p a{
     font-weight: bold;
 }
 
+.frame {
+    position: relative;
+    max-width: 320px;
+    margin: 2% auto;
+}
+
+.frame img{
+    width: 100%;
+}
+
+.pic-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.mobile h3 {
+    text-shadow: 5px 5px 5px #ccc;
+}
+
+article {
+    padding: 2%;
+}
+
+article h3 {
+    text-align: center;
+}
+
+article img {
+    margin: 0 auto;
+}
+
+article ul {
+    margin-left: 10%;
+}
+
+article:nth-of-type(2) {
+    background-color: rgba(204, 204, 204, 0.3);
+}
+
 .txt {
     text-align: center;
     margin: 10px 0;
@@ -138,7 +194,6 @@ iframe {
 
     /* header for tablet */
     header {
-        position: static;
         padding-bottom: 2%;
     }
 
@@ -171,6 +226,32 @@ iframe {
         width: 600px;
         height: 450px;
         margin: auto;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+    }
+
+    .pic-text {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    aside {
+        text-align: center;
+        font-size: 1.25em;
+        font-style: italic;
+        font-weight: bold;
+        padding: 2%;
+        background-color: rgba(204, 204, 204, 0.3);
+        box-shadow: 5px 5px 8px #000;
+        text-shadow: 5px 5px 5px #b3b3b3;
+        border-radius: 0 15px;
+    }
+    .grid-item4 {
+        grid-column: 1 / span 3;
     }
 }
 
@@ -205,6 +286,21 @@ iframe {
         color: #000;
         background-color: #fff;
     }
+
+    .pic-text {
+        font-size: 1.5em;
+        padding: 20px;
+    }
+
+    .frame {
+        opacity: 0.9;
+
+    }
+
+    .frame:hover {
+        opacity: 1;
+        box-shadow: 8px 8px 10px #808080;
+    }
 }
 /* large screen */
 @media screen and (min-width: 1921px) {
@@ -212,6 +308,8 @@ iframe {
         width: 1920px;
         margin: 0 auto;
     }
+
+    
 }
 
 /* Print */
