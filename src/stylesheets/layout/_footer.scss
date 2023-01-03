@@ -1,0 +1,106 @@
+@use "../abstracts" as *;
+
+.footer-main {
+  background-color: $text-color;
+  color: $text-white;
+
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140;
+    margin: 0 auto;
+    padding: 43px 0;
+
+    @include tablet {
+      max-width: 720px;
+      padding: 28px 0;
+    }
+  }
+
+  &__col {
+    width: pxToRem(280);
+    margin-right: pxToRem(29);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .title {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 2px;
+      padding-bottom: 19px;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #7d7d7d;
+
+      @include tablet {
+        font-size: pxToRem(12);
+        line-height: pxToRem(14);
+      }
+    }
+
+    .link-list {
+      font-size: 16px;
+      line-height: 24px;
+
+      @include tablet {
+        font-size: pxToRem(11);
+        line-height: pxToRem(16);
+      }
+
+      .link {
+        margin-top: 12px;
+      }
+    }
+
+  }
+
+// bottom footer
+
+  &__bottom {
+    display: flex;
+    padding: 28px 0 40px;
+    max-width: 1140;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-top: 1px solid #7d7d7d;
+
+    @include tablet {
+      max-width: 720px;
+    }
+  }
+
+  &__coppyright {
+    line-height: 24px;
+    font-size: 16px;
+
+    @include tablet {
+      line-height: pxToRem(12.8);
+      font-size: pxToRem(11);
+    }
+  }
+
+  &__social {
+
+    .social-img {
+      @include tablet {
+        height: 16.5px;
+      }
+    }
+
+
+    a {
+      display: inline-block;
+      margin-right: 45px;
+
+      @include tablet {
+        margin-right: 30px;
+      }
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+}

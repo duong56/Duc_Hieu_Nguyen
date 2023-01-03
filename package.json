@@ -32,9 +32,10 @@
     "editorconfig": "^1.0.1"
   },
   "lint-staged": {
-    "src/**/*.{html,css}": [
+    "src/**/*.{html,scss}": [
       "prettier --write --ignore-unknown",
       "eslint --fix --max-warnings=0"
     ]
-  }
+  },
+  "eslintIgnore" : ["src/**/*.scss"]
 }
