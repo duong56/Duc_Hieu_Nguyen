@@ -8,22 +8,34 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    max-width: 1140;
+    width: 100%;
     margin: 0 auto;
     padding: 43px 0;
 
     @include tablet {
-      max-width: 720px;
       padding: 28px 0;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
     }
   }
 
   &__col {
-    width: pxToRem(280);
+    width: 25%;
     margin-right: pxToRem(29);
+
+    @include mobile {
+      width: 35%;
+      margin-top: 28px;
+    }
 
     &:last-child {
       margin-right: 0;
+
+      @include mobile {
+        margin-right: pxToRem(29);
+      }
     }
 
     .title {
@@ -33,7 +45,7 @@
       margin-bottom: 2px;
       padding-bottom: 19px;
       letter-spacing: 1px;
-      border-bottom: 1px solid #7d7d7d;
+      border-bottom: 1px solid $border;
 
       @include tablet {
         font-size: pxToRem(12);
@@ -52,6 +64,10 @@
 
       .link {
         margin-top: 12px;
+
+        @include mobile {
+          margin-top: 6px;
+        }
       }
     }
 
@@ -60,15 +76,18 @@
 // bottom footer
 
   &__bottom {
+    width: 100%;
     display: flex;
     padding: 28px 0 40px;
-    max-width: 1140;
     margin: 0 auto;
     justify-content: space-between;
     border-top: 1px solid #7d7d7d;
 
-    @include tablet {
-      max-width: 720px;
+
+    @include mobile {
+      padding-bottom: 46px;
+      flex-direction: column-reverse;
+      align-items: center;
     }
   }
 
@@ -80,9 +99,18 @@
       line-height: pxToRem(12.8);
       font-size: pxToRem(11);
     }
+
+    @include mobile {
+      text-align: center;
+      margin-top: 29px;
+    }
+
+
   }
 
   &__social {
+
+    width: fit-content;
 
     .social-img {
       @include tablet {
