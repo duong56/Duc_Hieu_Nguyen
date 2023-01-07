@@ -157,7 +157,6 @@
 
     &__phone {
       position: relative;
-      top: 8px;
       @include tablet {
         top: 0;
         height: pxToRem(336);
