@@ -273,6 +273,14 @@
 
   &__download {
     margin-bottom: pxToRem(60);
+    display: inline-block;
+    @include mobile {
+      position: absolute;
+      left: 50%;
+      bottom: -30%;
+      transform: translateX(-50%);
+    }
+
 
     @include mobile {
       position: absolute;
