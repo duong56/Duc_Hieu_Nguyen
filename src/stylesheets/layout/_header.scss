@@ -168,6 +168,7 @@
       }
     }
     .phone-img {
+      display: block;
       width: 100%;
 
       @include tablet {
@@ -281,15 +282,6 @@
       transform: translateX(-50%);
     }
 
-
-    @include mobile {
-      position: absolute;
-      left: 50%;
-      bottom: -30%;
-      transform: translateX(-50%);
-    }
-
-
     .img-store:first-child {
       margin-right: pxToRem(30);
 
@@ -304,6 +296,7 @@
     }
 
     .img-store {
+      display: unset;
       @include tablet {
         width: pxToRem(71);
         height: pxToRem(20);
