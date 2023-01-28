@@ -71,6 +71,9 @@
       display: flex;
       align-items: center;
 
+      &--desc {
+        height: 100%;
+      }
       &--name {
         color: $background-color;
 
@@ -92,8 +95,6 @@
       &--img {
         width: auto;
         margin-right: 29px;
-
-
         &  img {
           border-radius: 50%;
           border: 2px transparent solid;
