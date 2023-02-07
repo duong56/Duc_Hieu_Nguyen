@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/pages/index.html",
     "prepare": "husky install",
-    "build": "parcel build --output dist"
+    "build": "parcel build src/page/index.html"
   },
   "keywords": [],
   "author": "",
@@ -38,5 +38,7 @@
       "eslint --fix --max-warnings=0"
     ]
   },
-  "eslintIgnore" : ["src/**/*.scss"]
+  "eslintIgnore": [
+    "src/**/*.scss"
+  ]
 }
