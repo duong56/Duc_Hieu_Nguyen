@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/pages/index.html",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "parcel build --output dist"
   },
   "keywords": [],
   "author": "",
